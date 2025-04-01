@@ -1,0 +1,76 @@
+body {
+    background-color: #1C1C1C;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container-div {
+    width: 550px;
+    height: 550px;
+    background-color: #1F2937;
+    border-radius: 15px;
+}
+
+h1 {
+    text-align: left;
+    color: white;
+    margin-top: 100px;
+    margin-left: 50px;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+#highlight {
+    color:#4ADF86;
+}
+
+h2 {
+    text-align: left;
+    color: #D5D4D8;
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+button {
+    background-color: #4ADF86;
+    border: none;
+    border-radius: 10px;
+    padding: 9px 15px;
+    margin-left: 50px;
+    margin-top: 50px;
+    font-size: large;
+    color: white;
+}
+
+hr {
+    margin-top: 40px;
+    margin-left: 50px;
+    width: 80%;
+    color: white;
+    opacity: 10%;
+}
+
+#password-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+input {
+    width: 210px;
+    height: 40px;
+    color: white;
+    opacity: 10%;
+    border: none;
+    border-radius: 10px;
+    margin: 20px;
+    margin-left: 50px;
+}
