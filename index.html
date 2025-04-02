@@ -11,9 +11,15 @@
             <div id="container-div">
                 <h1>Generate a <br><span id="highlight">random Password</span></h1>
                 <h2>Never use an insecure password again.</h2>
-                <button onclick="generatePwd()">Generate passwords</button>
-                <input type="checkbox" id="check-numbers" name="Numbers">Numbers
-                <input type="checkbox" id="check-symbols" name="Symvols">Symbols
+               <div class="button-check-ctn">
+                    <button onclick="generatePwd()">Generate passwords</button>
+                    <input type="checkbox" class="custom-checkbox" id="check-numbers">
+                        Numbers
+                    <input type="checkbox" class="custom-checkbox" id="check-symbols">
+                        Symbols
+                    </div>
+                <br>
+                <!-- <input type="range" min="1" max="15" value="50" class="slider" id="pwd-length"> -->
                 <hr>
                 <div id="password-div">
                     <p id="pwdOne"></p>
