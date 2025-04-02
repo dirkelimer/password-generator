@@ -18,8 +18,11 @@
                     <input type="checkbox" class="custom-checkbox" id="check-symbols">
                         Symbols
                     </div>
-                <br>
-                <!-- <input type="range" min="1" max="15" value="50" class="slider" id="pwd-length"> -->
+                    <div class="slider-ctn">
+                        <input type="range" min="1" max="20" value="50" class="slider" id="pwd-length">
+                    </div>
+                <div id="length-txt">Set the password length to <span id="length-value"></span>
+                </div>
                 <hr>
                 <div id="password-div">
                     <p id="pwdOne"></p>
@@ -27,6 +30,7 @@
                     <p id="pwdTwo"></p>
                     <img src="img/copyboard.svg" width="20" id="copy-pwd-two" onClick="copyPwdTwo()">
                 </div>
+                <footer>programmed by <a href="https://www.elimer.de">Dirk Elimer</a></footer>
             </div>
     </div>
 <script src="index.js"></script>

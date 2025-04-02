@@ -3,8 +3,12 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 
 const pwdFieldOne = document.getElementById("pwdOne")
 const pwdFieldTwo = document.getElementById("pwdTwo")
+const slider = document.getElementById("pwd-length")
+const currentValue = slider.value
 let numbersChecked = false
 let symbolsChecked = false
+let pwdLength = 20
+const pwdLengthValue = document.getElementById("length-value")
 
 function checkNumbers() {
     if (document.getElementById("check-numbers").checked === true) {
@@ -33,14 +37,14 @@ function generatePwd() {
     checkSymbols()
 
     if (numbersChecked === false && symbolsChecked === false) {
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < pwdLength; i++) {
             const indexOne = Math.floor(Math.random() * 52);
             const indexTwo = Math.floor(Math.random() * 52);
             passwordOne += characters[indexOne];
             passwordTwo += characters[indexTwo];
         }
     } else if (numbersChecked === true && symbolsChecked === false) {
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < pwdLength; i++) {
             const indexOne = Math.floor(Math.random() * 62);
             const indexTwo = Math.floor(Math.random() * 62);
             passwordOne += characters[indexOne];
@@ -51,14 +55,14 @@ function generatePwd() {
             ...characters.slice(0, 53),
             ...characters.slice(62, 92)];
 
-            for (let i = 0; i < 15; i++) {
+            for (let i = 0; i < pwdLength; i++) {
                 const indexOne = Math.floor(Math.random() * filteredChars.length);
                 const indexTwo = Math.floor(Math.random() * filteredChars.length);
                 passwordOne += filteredChars[indexOne];
                 passwordTwo += filteredChars[indexTwo];
             }
     } else if (numbersChecked === true && symbolsChecked === true) {
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < pwdLength; i++) {
             const indexOne = Math.floor(Math.random() * characters.length);
             const indexTwo = Math.floor(Math.random() * characters.length);
             passwordOne += characters[indexOne];
@@ -69,6 +73,22 @@ function generatePwd() {
     pwdFieldTwo.textContent = passwordTwo;
 }
 
+// Slider functions
+
+pwdLengthValue.textContent = pwdLength
+
+slider.addEventListener('input', function() {
+    pwdLength = this.value;
+    pwdLengthValue.textContent = pwdLength;
+});
+
+slider.addEventListener('change', function() {
+    pwdLength = this.value;
+    pwdLengthValue.textContent = pwdLength;
+});
+
+
+// Copy to Clipboard functions
 
 function copyPwdOne(passwordField) {
     const tempInput = document.createElement("input");

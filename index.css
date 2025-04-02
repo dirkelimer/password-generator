@@ -13,7 +13,7 @@ body {
 
 #container-div {
     width: 550px;
-    height: 550px;
+    height: 600px;
     background-color: #1F2937;
     border-radius: 15px;
 }
@@ -101,5 +101,103 @@ input[type="checkbox"] {
     background-color: #4ADF86; /* Checked background color */
   }
   
+.slider-ctn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+}
 
+/* Styling the track */
+input[type="range"] {
+    -webkit-appearance: none; /* Removes default styling in WebKit browsers */
+    appearance: none;
+    width: 80%;
+    height: 10px;
+    background: #273549;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  /* Styling the thumb (the draggable part) */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4ADF86;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #4ADF86;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none; /* Firefox adds a border by default */
+  }
+  
+  /* Styling the track for Firefox */
+  input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    background: #273549;
+    border-radius: 4px;
+  }
+  
+  /* For IE/Edge */
+  input[type="range"]::-ms-track {
+    width: 100%;
+    height: 8px;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  
+  input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #4ADF86;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  input[type="range"]::-ms-fill-lower {
+    background: #273549;
+    border-radius: 4px;
+  }
+  
+  input[type="range"]::-ms-fill-upper {
+    background: #273549;
+    border-radius: 4px;
+  }
+  
+ #length-txt {
+    margin-top: 30px;
+    text-align: center;
+ }
  
+ #length-value {
+    background-color: #111E32;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    color: #4ADF86;
+ }
+
+ footer {
+    text-align: center;
+    color: #D5D4D8;
+    opacity: 70%;
+    font-size: 8px;
+    margin-top: 20px;
+ }
+
+ a {
+    color: #4ADF86;
+ }
