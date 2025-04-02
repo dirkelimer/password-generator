@@ -68,11 +68,12 @@ p {
     display: flex;
     width: 210px;
     height: 40px;
-    color: white;
+    color: #4ADF86;
     border: none;
     border-radius: 10px;
-    margin: 20px;
+    margin: 5px;
     background-color: #273549;
     align-items: center;
     justify-content: center;
 }
+

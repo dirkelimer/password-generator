@@ -5,8 +5,37 @@ const pwdFieldOne = document.getElementById("pwdOne")
 const pwdFieldTwo = document.getElementById("pwdTwo")
 
 function generatePwd() {
-    let passwordOne = "asdASd213!";
+    let passwordOne = ''
+    let passwordTwo = ''
+
+    for (let i = 0; i < 15; i++) {
+        const indexOne = Math.floor(Math.random() * characters.length);
+        const indexTwo = Math.floor(Math.random() * characters.length);
+        passwordOne += characters[indexOne];
+        passwordTwo += characters[indexTwo];
+    }
     pwdFieldOne.textContent = passwordOne;
-    let passwordTwo = "asdasdasdasd2!";
     pwdFieldTwo.textContent = passwordTwo;
+}
+
+function copyPwdOne(passwordField) {
+    const tempInput = document.createElement("input");
+    tempInput.value = pwdFieldOne.textContent;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    navigator.clipboard.writeText(tempInput.value).then(() => {
+        alert("Password copied" + " " + tempInput.value);
+    });
+    document.body.removeChild(tempInput);
+}
+
+function copyPwdTwo(passwordField) {
+    const tempInput = document.createElement("input");
+    tempInput.value = pwdFieldTwo.textContent;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    navigator.clipboard.writeText(tempInput.value).then(() => {
+        alert("Password copied" + " " + tempInput.value);
+    });
+    document.body.removeChild(tempInput);
 }
