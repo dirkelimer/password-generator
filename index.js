@@ -4,11 +4,16 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 const pwdFieldOne = document.getElementById("pwdOne")
 const pwdFieldTwo = document.getElementById("pwdTwo")
 const slider = document.getElementById("pwd-length")
-const currentValue = slider.value
+const pwdLengthValue = document.getElementById("length-value")
 let numbersChecked = false
 let symbolsChecked = false
-let pwdLength = 20
-const pwdLengthValue = document.getElementById("length-value")
+let pwdLength = 15
+
+// Initialize the slider value on page load
+document.addEventListener('DOMContentLoaded', function() {
+    slider.value = pwdLength;
+    pwdLengthValue.textContent = pwdLength;
+});
 
 function checkNumbers() {
     if (document.getElementById("check-numbers").checked === true) {

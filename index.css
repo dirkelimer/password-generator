@@ -2,6 +2,9 @@ body {
     background-color: #1C1C1C;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #D5D4D8;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 #container {
@@ -52,6 +55,9 @@ hr {
     justify-content: center;
     align-items: center;
     height: 10vh;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 p {
@@ -201,3 +207,121 @@ input[type="range"] {
  a {
     color: #4ADF86;
  }
+
+.password-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+label {
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #container-div {
+        width: 90%;
+        height: auto;
+        min-height: 550px;
+        padding-bottom: 20px;
+    }
+
+    h1 {
+        margin-top: 40px;
+        margin-left: 20px;
+        font-size: 32px;
+    }
+
+    h2 {
+        margin-left: 20px;
+        font-size: 18px;
+    }
+
+    hr {
+        margin-left: 20px;
+        width: 85%;
+    }
+
+    .button-check-ctn {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #password-div {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    p {
+        width: 80%;
+        max-width: 210px;
+    }
+    
+    #copy-pwd-one, #copy-pwd-two {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .password-item {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .checkbox-wrapper {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    button {
+        width: 80%;
+        max-width: 250px;
+    }
+    
+    footer {
+        margin-top: 30px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+    
+    .button-check-ctn {
+        padding: 0 10px;
+    }
+    
+    input[type="checkbox"] {
+        width: 30px;
+        height: 30px;
+    }
+    
+    button {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+    
+    #container {
+        min-height: 100vh;
+        padding: 20px 0;
+    }
+    
+    input[type="range"] {
+        width: 90%;
+    }
+}
+
+#copy-pwd-one, #copy-pwd-two {
+    cursor: pointer;
+    padding: 8px;
+}
