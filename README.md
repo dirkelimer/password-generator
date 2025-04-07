@@ -30,6 +30,5 @@ Not guaranteed updates in the future.
 
 ## Links
 
-- Read the blog post about it: [My Password Generator App](../blog/my-password-generator-app)
-- See the GitHub Repo: [Password Generator](https://github.com/dirkelimer/password-generator)
+- Read the blog post about it: [My Password Generator App](https://elimer.de)
 - Check the live version: [pwd.elimer.de](https://pwd.elimer.de)
